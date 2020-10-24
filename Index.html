@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firebase CRUD</title>
+
+  <!-- BOOTSWATCH -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/pulse/bootstrap.min.css">
+
+  <!-- ANIMATE CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+
+</head>
+
+<body class="bg-light">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/superhero/bootstrap.min.css"
+    integrity="sha384-HnTY+mLT0stQlOwD3wcAzSVAZbrBp141qwfR4WfTqVQKSgmcgzk+oP0ieIyrxiFO" crossorigin="anonymous">
+
+
+  <div class="container mt-5">
+    <!-- ADD TASK -->
+    <div class="container p-10">
+     
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+
+              <h1 class="h4">REGISTRO DE ADMINISTRADOR</h1>
+
+              <form id="task-form">
+
+                <div class="form-group">
+                  <label>Primer Nombre *</label>
+                  <input type="text" placeholder="Introduce tu primer nombre" required class="form-control" id="primernombre">
+                </div>
+
+                <div class="form-group">
+                  <label>Segundo Nombre *</label>
+                  <input type="text" placeholder="Introduce tu segundo nombre" required class="form-control"
+                    id="segundonombre">
+                </div>
+
+                <div class="form-group">
+                  <label>Email *</label>
+                  <input type="Email" placeholder="Introduce tu Email" required class="form-control" id="email">
+                </div>
+
+                <div class="form-group">
+                  <label>Dirección *</label>
+                  <input type="text" placeholder="Introduce tu dirección" required class="form-control"
+                    id="direccion">
+                </div>
+
+                
+                <button class="btn btn-primary" id="btn-task-form">
+                  Save
+                </button>
+
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- Tasks List -->
+        <div class="col-md-6" id="tasks-container"></div>
+      </div>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyCZ1xihMn05rUfMU59ldazZhGpIKb_bq7w",
+        authDomain: "controlasistencia-a0b1e.firebaseapp.com",
+        databaseURL: "https://controlasistencia-a0b1e.firebaseio.com",
+        projectId: "controlasistencia-a0b1e",
+        storageBucket: "controlasistencia-a0b1e.appspot.com",
+        messagingSenderId: "444469257690",
+        appId: "1:444469257690:web:c2ce3cdff582140fd80ce3"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <!-- CUSTOM CODE -->
+    <script src="Index.js"></script>
+
+
+</body>
+
+</html>
